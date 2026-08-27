@@ -15,6 +15,7 @@ public class App {
           
           profe.nombre="Lalo";
           profe.setAntiguedad(8);
+          profe.setSalarioBase(1000);
           
           System.out.println("resultado:");
 
