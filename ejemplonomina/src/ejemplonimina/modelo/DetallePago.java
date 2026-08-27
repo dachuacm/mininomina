@@ -20,14 +20,14 @@ public DetallePago(Profesor p, double uma){
 
 public double calcularDeducciones(){
     System.out.println("En construccion calculo de decucciones....\ndatos de prueba");
-    isr=73.5;
-    cuotaIsste=263.8;
+    isr=profesor.getSalarioBase()*.12;
+    cuotaIsste=profesor.getSalarioBase()*.065;;
     return isr+cuotaIsste;
 }
 public double calcularPercepciones(){
      System.out.println("En construccion calculo de percepciones....\ndatos de prueba");
     vale=300.58;
-    primaAnt=135.47;
+    primaAnt=(profesor.getSalarioBase()/15)*12*profesor.getAntiguedad();
     return vale+primaAnt;
     }
 
@@ -68,6 +68,7 @@ public String imprimeDeducciones(){
 public String imprimePercepciones(){
        return "Percepciones:\n"+"salario: "+profesor.getSalarioBase() +"\n"+
               "vale despensa: "+vale+"\n"+
+              "antigüedad:"+ primaAnt+"\n"+
               "Total percepciones: "+(vale +profesor.getSalarioBase()+ primaAnt)+"\n";
 }
 @Override

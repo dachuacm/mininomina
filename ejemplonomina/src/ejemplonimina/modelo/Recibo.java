@@ -15,8 +15,8 @@ public String toString() {
           "nombre:" +detalle.getProfesor().nombre + 
           "\tnumero empleado:" + detalle.getProfesor().getNumEmpleado()+
           "\tantigüedad:" + detalle.getProfesor().getAntiguedad()+
-          "\n Deducciones"+detalle.imprimeDeducciones()+
-          "\n Percepciones"+detalle.imprimePercepciones() +
+          "\n"+detalle.imprimeDeducciones()+
+          "\n"+detalle.imprimePercepciones() +
            "\nTotal a pagar: "+ totalPago;
 }
 
